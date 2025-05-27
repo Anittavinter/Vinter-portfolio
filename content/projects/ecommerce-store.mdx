@@ -1,41 +1,75 @@
 ---
-title: Food & Grocery Order App  
-summary: A full-stack food and grocery ordering app built with Next.js and Tailwind CSS.  
-image: /images/projects/order-app.webp 
-author: 'Vinter'  
-publishedAt: '2025-04-01'  
+title: OrderUp App  
+summary: A full-stack food pre-ordering mobile app for dine-in and takeaway customers, built with React Native and Node.js.  
+image: /images/projects/order-app-Native.png  
+author: 'Vinter Achieno'  
+publishedAt: '2025-03-01'  
 ---
 
-This is a full-stack food and grocery ordering app built with Next.js. It features real-time product browsing, cart management, and a streamlined checkout experience. The app is optimized for performance and mobile-first users, making it easy to order essentials on the go.
+**OrderUp** is an on-demand food **pre-ordering app** designed to eliminate the everyday friction of dining in and takeout experiences. Built as a collaborative capstone project, it connects restaurants and customers through a seamless mobile-first platform that prioritizes **speed, simplicity, and convenience**.
+
+Instead of waiting in long queues or for a bill, customers can **pre-order their meals**, **pay in advance**, and have their food **ready on arrival**. Whether dining in or picking up, OrderUp enhances the restaurant experience by making it **fast, smooth, and time-conscious**.
+
+## Project Vision
+
+To automate the food ordering process and make it simple, convenient, and efficient for:
+- **Customers** who want to enjoy a restaurant meal without the wait.
+- **Restaurants** looking to manage peak times better.
+- **Admins** who oversee user and order flows on the platform.
+
+Our goal: Cut in half the time spent in restaurants by simplifying the flow from discovery → ordering → pickup → dine-in.
+
+---
+
+## Key Problems Solved
+
+- Long waiting times for meal preparation
+- Delays in receiving the bill
+- Limited break times for working individuals
+- Order congestion during peak hours
+
+OrderUp solves this by **allowing users to place orders ahead of time**, ensuring food is ready the moment they arrive.
+
+---
 
 ## Features
 
-- **Product Listings**: Browse food and grocery items in categorized views.
-- **Search & Filter**: Quickly find products with intuitive search and filtering options.
-- **Shopping Cart**: Add multiple items to the cart and adjust quantities.
-- **Order Checkout**: Seamless checkout flow with address and payment integration.
-- **User Authentication**: Sign up, log in, and manage personal profiles.
-- **Order Tracking**: Track the status of orders in real-time.
+- **Restaurant Discovery**: Browse and choose restaurants with pre-order support.
+- **Menu Exploration**: View updated menus with pricing and meal descriptions.
+- **Meal Pre-Ordering**: Choose a meal, schedule pickup/dine-in time, and pre-pay.
+- **User Profiles**: Register, log in, and manage personal and order history.
+- **Order Status Tracking**: See if your meal is being prepared or ready for pickup.
+- **Payment Integration**: Secure pre-payment for meals (Stripe/M-Pesa-ready).
+- **Admin Dashboard** (Coming Soon): For managing orders, menus, and analytics.
 
-## Technologies
+---
 
-- **Next.js**: For building fast, scalable web applications.
-- **Tailwind CSS**: For responsive, utility-first styling.
-- **Prisma**: As an ORM to handle database operations.
-- **PostgreSQL**: Relational database for managing product and order data.
-- **Vercel**: Deployment platform for performance and scalability.
+## Technologies Used
+
+- **React Native (Expo)**: Cross-platform mobile app development.
+- **Node.js + Express**: Backend APIs and server logic.
+- **MongoDB (Mongoose)**: Database for users, restaurants, menus, and orders.
+- **Cloudinary**: For hosting and delivering restaurant and food images.
+- **JWT**: User authentication and session management.
+- **Expo Go**: Easy mobile testing on Android and iOS.
+
+---
 
 ## Getting Started
 
-Clone the repository and install dependencies:
-
 ```bash
-git clone
-cd food-grocery-app
+# Clone frontend
+git clone https://github.com/yourteam/orderup-app.git
+cd orderup-app
 npm install
 
-## Deployment
+# Start Expo
+npx expo start
 
-## Conclusion
+# Clone backend
+git clone https://github.com/yourteam/orderup-backend.git
+cd orderup-backend
+npm install
+npm start
 
 

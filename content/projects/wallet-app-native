@@ -1,0 +1,36 @@
+---
+title: WalletMaster  
+summary: A full-stack personal finance management app built with React Native, Node.js, and MongoDB.  
+image: /images/projects/wallet-app-native.png  
+author: 'Vinter Achieno'  
+publishedAt: '2025-02-01'  
+---
+
+WalletMaster is a full-stack personal finance and budgeting app built to help users take control of their spending and financial goals. Designed with a mobile-first approach using React Native, it features expense tracking, budget planning, and financial analytics—all in one streamlined experience.
+
+## Features
+
+- **Expense Tracking**: Add, edit, and delete daily expenses with optional receipt uploads and notes.
+- **Budget Management**: Set monthly and category-based budgets with visual budget vs. actual insights.
+- **Search & Filter**: Easily find expenses based on category, date, or keyword.
+- **Analytics Dashboard**: Visual breakdowns of monthly spending and category trends.
+- **User Authentication**: Secure sign-up, login, and personalized profile settings.
+- **Notifications**: Alerts when nearing or exceeding budget limits.
+
+## Technologies
+
+- **React Native**: For building a performant and native-feeling cross-platform mobile app.
+- **Node.js & Express**: Backend server for authentication, data processing, and API management.
+- **MongoDB & Mongoose**: NoSQL database for storing user, budget, and transaction data.
+- **Cloudinary**: For handling receipt image uploads.
+- **Expo**: To simplify development and deployment of the mobile app.
+
+## Getting Started
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/Anittavinter/React-Native.git
+cd 4-React-Native/WalletMaster
+npm install
+npx expo start
