@@ -8,7 +8,7 @@ export default function Intro() {
       <div className='mt-2 flex-1 md:mt-0'>
         <h1 className='title no-underline'>Hey, I&#39;m Vinter.</h1>
         <p className='mt-3 font-light text-muted-foreground'>
-        I&#39;m UI/UX Designer and Developer based in Nairobi, Kenya. 
+          I&#39;m UI/UX Designer and Developer based in Nairobi, Kenya. 
           I help businesses connect with their audiences through intuitive, responsive digital experiences.
         </p>
       </div>
