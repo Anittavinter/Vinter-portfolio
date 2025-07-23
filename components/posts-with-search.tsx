@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { PostMetadata } from '@/lib/posts'
 
 import Posts from '@/components/posts'
-import  { Input }  from '@/components/ui/input'
+import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Cross2Icon } from '@radix-ui/react-icons'
 
@@ -14,14 +14,11 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
     post.title?.toLowerCase().includes(query.toLowerCase())
   )
 
-  const isFiltered = query.length > 0
-  function resetFilter() {
-    setQuery('')
-  }
+  const isFiltered = query.trim().length > 0
 
   return (
     <div>
-      <div className='mb-12 flex items-center gap-3'>
+      <div className='mb-12 flex flex-col gap-3 sm:flex-row sm:items-center'>
         <Input
           type='text'
           placeholder='Search posts...'
@@ -29,15 +26,15 @@ export default function PostsWithSearch({ posts }: { posts: PostMetadata[] }) {
           value={query}
           onChange={e => setQuery(e.target.value)}
         />
+
         {isFiltered && (
           <Button
             size='sm'
             variant='secondary'
-            onClick={resetFilter}
-            className='h-8 px-2 lg:px-3'
+            onClick={() => setQuery('')}
+            className='flex items-center gap-1 h-8 px-3'
           >
-            Reset
-            <Cross2Icon className='ml-2 h-4 w-4' />
+            Reset <Cross2Icon className='h-4 w-4' />
           </Button>
         )}
       </div>

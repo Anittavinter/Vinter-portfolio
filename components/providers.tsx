@@ -1,32 +1,35 @@
 'use client'
 
+import { ThemeProvider, useTheme } from 'next-themes'
+import { Toaster } from 'sonner'
+import React, { memo } from 'react'
 
-import { ThemeProvider, useTheme } from "next-themes"
-import { Toaster } from "sonner"
-
-
-export default function Providers({children}: { children: React.ReactNode }) {
-    return (
-        <ThemeProvider 
-          enableSystem
-          attribute="class"
-          defaultTheme="system"
-          disableTransitionOnChange
-        >
-            {children}
-            <ToasterProvider />
-        </ThemeProvider>    
-    )
+interface ProvidersProps {
+  children: React.ReactNode
 }
 
-function ToasterProvider() {
-    const { resolvedTheme } = useTheme()
-
-    return (
-        <Toaster
-         closeButton
-         position="top-right"
-         theme={resolvedTheme === 'dark' ? 'dark' : 'light'}
-        />
-    )
+export default function Providers({ children }: ProvidersProps) {
+  return (
+    <ThemeProvider
+      enableSystem
+      attribute="class"
+      defaultTheme="system"
+      disableTransitionOnChange
+    >
+      {children}
+      <ToasterProvider />
+    </ThemeProvider>
+  )
 }
+
+const ToasterProvider = memo(() => {
+  const { resolvedTheme } = useTheme()
+
+  return (
+    <Toaster
+      closeButton
+      position="top-right"
+      theme={resolvedTheme === 'dark' ? 'dark' : 'light'}
+    />
+  )
+})

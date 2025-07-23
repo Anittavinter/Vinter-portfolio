@@ -1,5 +1,4 @@
 import Link from 'next/link'
-
 import { PostMetadata } from '@/lib/posts'
 import { formatDate } from '@/lib/utils'
 
@@ -10,17 +9,17 @@ export default function Posts({ posts }: { posts: PostMetadata[] }) {
         <li key={post.slug}>
           <Link
             href={`/posts/${post.slug}`}
-            className='flex flex-col justify-between gap-x-4 gap-y-1 sm:flex-row'
+            className='flex flex-col justify-between gap-y-1 sm:flex-row sm:items-center gap-x-4'
           >
-            <div className='max-w-lg'>
+            <div className='max-w-xl'>
               <p className='text-lg font-semibold'>{post.title}</p>
-              <p className='mt-1 line-clamp-2 text-sm font-light text-muted-foreground'>
+              <p className='mt-1 line-clamp-2 text-sm text-muted-foreground'>
                 {post.summary}
               </p>
             </div>
 
             {post.publishedAt && (
-              <p className='mt-1 text-sm font-light'>
+              <p className='text-sm text-muted-foreground sm:text-right'>
                 {formatDate(post.publishedAt)}
               </p>
             )}
