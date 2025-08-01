@@ -20,11 +20,15 @@ const components = {
   Counter
 }
 
-export default function MDXContent(props: MDXRemoteProps) {
+interface MDXContentProps {
+  source: string
+}
+
+export default function MDXContent({ source }: MDXContentProps) {
   return (
     <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
+      source={source}
+      components={components}
     />
   )
 }
