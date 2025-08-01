@@ -1,6 +1,6 @@
 'use client'
 
-import { JSX, ReactNode, HTMLAttributes } from 'react'
+import { ReactNode, HTMLAttributes } from 'react'
 import { highlight } from 'sugar-high'
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc'
 

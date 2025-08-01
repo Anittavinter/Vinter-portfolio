@@ -33,3 +33,5 @@ const ToasterProvider = memo(() => {
     />
   )
 })
+
+ToasterProvider.displayName = 'ToasterProvider'
