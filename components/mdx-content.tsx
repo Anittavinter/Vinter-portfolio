@@ -1,5 +1,3 @@
-'use client'
-
 import { ReactNode, HTMLAttributes } from 'react'
 import { highlight } from 'sugar-high'
 import { MDXRemote } from 'next-mdx-remote/rsc'
@@ -24,7 +22,7 @@ interface MDXContentProps {
   source: string
 }
 
-export default function MDXContent({ source }: MDXContentProps) {
+export default async function MDXContent({ source }: MDXContentProps) {
   return (
     <MDXRemote
       source={source}
