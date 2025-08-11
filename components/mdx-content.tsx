@@ -2,7 +2,7 @@
 
 import { ReactNode, HTMLAttributes } from 'react'
 import { highlight } from 'sugar-high'
-import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc'
+import { MDXRemote } from 'next-mdx-remote/rsc'
 
 import Counter from '@/components/counter'
 
