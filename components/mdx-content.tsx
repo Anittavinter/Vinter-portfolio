@@ -1,14 +1,4 @@
-import { ReactNode, HTMLAttributes } from 'react'
 import { highlight } from 'sugar-high'
-
-interface CodeProps extends HTMLAttributes<HTMLElement> {
-  children?: ReactNode
-}
-
-function Code({ children, ...props }: CodeProps) {
-  const codeHTML = highlight(String(children ?? ''))
-  return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
-}
 
 interface MDXContentProps {
   source: string
