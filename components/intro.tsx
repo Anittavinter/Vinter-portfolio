@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import authorImage from '@/public/images/authors/named.jpg'
 
 export default function Intro() {
   return (
@@ -36,7 +35,7 @@ export default function Intro() {
         <div className="relative">
           <Image
             className='rounded-2xl shadow-lg'
-            src={authorImage}
+            src="/images/authors/named.jpg"
             alt='Vinter Achieno'
             width={320}
             height={380}
